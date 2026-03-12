@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 1. 웹 화면 기본 설정 및 여백 압축
-st.set_page_config(layout="wide", page_title="일일 지표 대시보드")
+st.set_page_config(layout="wide", page_title="동연 지표 대시보드")
 st.markdown("""
 <style>
     .block-container { padding-top: 2rem; padding-bottom: 1rem; }
@@ -20,7 +20,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("📊 나의 실시간 금융 지표 대시보드")
+st.title("📊 동연이의 금융 지표 대시보드")
 
 # --- 데이터 수집 함수 모음 ---
 
@@ -126,3 +126,4 @@ st.write("---")
 st.subheader("😨 시장 투자 심리")
 fg_score, fg_rating = get_fear_and_greed()
 st.metric("Fear & Greed Index", f"{fg_score} 점", fg_rating)
+
